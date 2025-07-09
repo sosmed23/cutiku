@@ -20,7 +20,7 @@ ALLOWED_HOSTS = [
     'cutiku.nebeng.web.id',# Domain lama Anda
 
     # === TAMBAHKAN DOMAIN BARU ANDA DI SINI ===
-    #'domain-baru.com',
+    'nebeng.web.id',
     # ==========================================
 ]
 RENDER_EXTERNAL_HOSTNAME = os.environ.get('RENDER_EXTERNAL_HOSTNAME')
