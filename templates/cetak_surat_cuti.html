@@ -92,6 +92,19 @@
             clear: both; 
             display: table; 
         }
+
+        /* === CSS BARU UNTUK COPYRIGHT FOOTER === */
+        .footer {
+            position: fixed;
+            bottom: -20px; /* Sedikit di luar area cetak agar pas di bawah */
+            left: 0;
+            right: 0;
+            text-align: center;
+            font-size: 8pt;
+            color: #888;
+            border-top: 1px solid #ccc;
+            padding-top: 5px;
+        }
         /* ------------------------------------------- */
     </style>
 </head>
@@ -238,6 +251,12 @@
         </div>
         <div class="clearfix"></div>
     </div>
+
+    <!-- ======================= BAGIAN BARU: COPYRIGHT FOOTER ======================= -->
+    <div class="footer">
+        <p>Dokumen ini dicetak melalui Aplikasi E-Cuti Online &copy; {% now "Y" %} Kantor Kementerian Agama Kabupaten Pohuwato</p>
+    </div>
+    <!-- ========================================================================= -->
     
 </body>
 </html>
