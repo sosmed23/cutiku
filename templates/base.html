@@ -1,5 +1,5 @@
 <!-- Pembaruan: templates/base.html -->
-<!-- Memindahkan posisi Alur Pengajuan ke atas dan meratakannya -->
+
 {% load static %}
 <!DOCTYPE html>
 <html lang="id">
@@ -58,7 +58,6 @@
 
                     <div class="mt-10">
                         <h3 class="text-sm font-semibold text-gray-600 uppercase">Alur Pengajuan</h3>
-                        <!-- PERUBAHAN: Menambahkan text-justify -->
                         <div class="mt-4 text-xs text-gray-500 space-y-2 text-justify">
                             <p>1. Pegawai mengajukan cuti.</p>
                             <p>2. Atasan langsung memberikan persetujuan.</p>
@@ -98,6 +97,17 @@
                         </form>
                     </div>
                 </main>
+
+                <!-- ======================================================= -->
+                <!-- === Footer Aplikasi === -->
+                <!-- ======================================================= -->
+                <footer class="bg-white p-4 text-center text-sm text-gray-500 border-t">
+                    <p>&copy; {% now "Y" %} Kantor Kementerian Agama Kabupaten Pohuwato. All Rights Reserved.</p>
+                    <!-- PENAMBAHAN: Baris untuk pembuat aplikasi -->
+                    <p class="mt-1 text-xs">Dibuat oleh [RN]</p>
+                </footer>
+                <!-- ======================================================= -->
+
             </div>
         </div>
         {% else %}
