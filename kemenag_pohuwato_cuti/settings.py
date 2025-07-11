@@ -16,12 +16,10 @@ DEBUG = os.environ.get('RENDER') != 'True'
 
 # Daftar domain yang diizinkan. Render akan menyediakan domainnya.
 ALLOWED_HOSTS = [
-    'cutiku.onrender.com', # Domain Render yang sudah ada
-    'cutiku.nebeng.web.id',# Domain lama Anda
+    'cutiku.onrender.com', # 
+    'cutiku.nebeng.web.id',# 
 
-    # === TAMBAHKAN DOMAIN BARU ANDA DI SINI ===
-    'nebeng.web.id',
-    # ==========================================
+    
 ]
 RENDER_EXTERNAL_HOSTNAME = os.environ.get('RENDER_EXTERNAL_HOSTNAME')
 if RENDER_EXTERNAL_HOSTNAME:
