@@ -142,7 +142,7 @@
             <br>
             <div class="signature-space">
                 {% if pengajuan.tanda_tangan_pemohon %}
-                    <img src="{{ pengajuan.tanda_tangan_pemohon.path }}" style="height: 40px;">
+                    <img src="{{ pengajuan.tanda_tangan_pemohon.url }}" style="height: 40px;">
                 {% endif %}
             </div>
             <p class="signature-name">{{ pengajuan.pegawai.get_full_name }}</p>
