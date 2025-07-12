@@ -101,5 +101,26 @@
             </form>
         </div>
     </div>
+    
+    <div class="w-full bg-yellow-100 text-yellow-800 py-2 px-4 text-sm font-medium whitespace-nowrap overflow-hidden relative">
+        <div class="absolute animate-marquee">
+            Informasi: Pengajuan cuti paling lambat dilakukan 7 hari sebelum tanggal cuti. Hubungi admin jika mengalami kendala login.
+        </div>
+    </div>
+</div>
+
+<style>
+@keyframes marquee {
+  0% { transform: translateX(100%); }
+  100% { transform: translateX(-100%); }
+}
+.animate-marquee {
+  display: inline-block;
+  padding-left: 100%;
+  animation: marquee 20s linear infinite;
+  white-space: nowrap;
+}
+</style>
+
 </div>
 {% endblock %}
