@@ -33,26 +33,22 @@
         .section-title { font-weight: bold; padding-left: 5px; margin-top: 8px; margin-bottom: 1px; }
         .catatan-cuti-table td { font-size: 8pt; padding: 2px 4px; }
         .sub-table td { border: none; }
-        
-        /* --- CSS DIPERBARUI UNTUK TANDA TANGAN --- */
+
         .signature-section { 
             margin-top: 5px;
             page-break-inside: avoid;
         }
         .signature-block {
             width: 45%;
-            /* Perataan teks di dalam blok tanda tangan */
             text-align: center; 
-            /* Posisi blok tanda tangan di kanan halaman */
             float: right;
-            margin-top: 5px; /* Jarak antara tabel dan ttd */
+            margin-top: 5px;
         }
         .signature-block p { margin: 0; line-height: 1.3; }
-        .signature-space { height: 50px; } /* Ruang untuk tanda tangan */
+        .signature-space { height: 50px; }
         .signature-name { font-weight: normal; }
         .signature-nip { font-size: 10pt; }
         .clearfix::after { content: ""; clear: both; display: table; }
-        /* ------------------------------------------- */
     </style>
 </head>
 <body>
@@ -90,7 +86,7 @@
         <tr><td>3. Cuti Sakit {% if pengajuan.jenis_cuti.kode == 'CS' %} <span style="font-family: DejaVu Sans;">✓</span>{% endif %}</td><td>4. Cuti Melahirkan {% if pengajuan.jenis_cuti.kode == 'CM' %} <span style="font-family: DejaVu Sans;">✓</span>{% endif %}</td></tr>
         <tr><td>5. Cuti Karena Alasan Penting {% if pengajuan.jenis_cuti.kode == 'CAP' %} <span style="font-family: DejaVu Sans;">✓</span>{% endif %}</td><td>6. Cuti di Luar Tanggungan Negara {% if pengajuan.jenis_cuti.kode == 'CLTN' %} <span style="font-family: DejaVu Sans;">✓</span>{% endif %}</td></tr>
     </table>
-    
+
     <div class="section-title">III. ALASAN CUTI</div>
     <table><tr><td style="height: 40px;">{{ pengajuan.alasan }}</td></tr></table>
 
@@ -103,7 +99,7 @@
             <td style="width: 30%;">{{ pengajuan.tanggal_mulai|date:"d F Y" }} s/d {{ pengajuan.tanggal_selesai|date:"d F Y" }}</td>
         </tr>
     </table>
-    
+
     <div class="section-title">V. CATATAN CUTI</div>
     <table class="catatan-cuti-table">
         <tr>
@@ -128,7 +124,6 @@
         </tr>
     </table>
 
-    <!-- ======================= BAGIAN DIPERBARUI TOTAL ======================= -->
     <div class="signature-section">
         <div class="section-title">VI. ALAMAT SELAMA MENJALANKAN CUTI</div>
         <table style="margin-bottom: 5px;">
@@ -143,6 +138,8 @@
             <div class="signature-space">
                 {% if pengajuan.tanda_tangan_pemohon %}
                     <img src="{{ pengajuan.tanda_tangan_pemohon.url }}" style="height: 40px;">
+                {% else %}
+                    <p style="font-style: italic;">(TTD)</p>
                 {% endif %}
             </div>
             <p class="signature-name">{{ pengajuan.pegawai.get_full_name }}</p>
@@ -150,7 +147,7 @@
         </div>
         <div class="clearfix"></div>
     </div>
-    
+
     <div class="signature-section" style="margin-top: 15px;">
         <div class="section-title">VII. PERTIMBANGAN ATASAN LANGSUNG</div>
         <table style="margin-bottom: 5px;">
@@ -192,7 +189,6 @@
         </div>
         <div class="clearfix"></div>
     </div>
-    <!-- ========================================================================= -->
 
 </body>
 </html>
