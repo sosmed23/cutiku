@@ -5,6 +5,14 @@ from django.urls import path, include
 from django.conf import settings
 from django.conf.urls.static import static
 
+# =============================================================
+# === PERBAIKAN: Tambahkan 3 baris ini untuk mengubah judul admin ===
+# =============================================================
+admin.site.site_header = "Admin E-Cuti Kemenag Pohuwato"
+admin.site.site_title = "Portal Admin E-Cuti"
+admin.site.index_title = "Selamat Datang di Portal Admin E-Cuti"
+# =============================================================
+
 urlpatterns = [
     # URL untuk Halaman Admin Django
     path('admin/', admin.site.urls),
